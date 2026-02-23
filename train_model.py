@@ -269,6 +269,9 @@ if __name__ == '__main__':
 
     print("\n[1/3] Generating synthetic training dataset (n=3000)...")
     df = generate_synthetic_dataset(n_samples=3000)
+    
+    # Ensure data directory exists before saving
+    os.makedirs('data', exist_ok=True)
     df.to_csv('data/synthetic_variants.csv', index=False)
     print(f"  Dataset saved → data/synthetic_variants.csv")
     print(f"  Class distribution: {dict(df['label'].value_counts())}")
