@@ -1,3 +1,12 @@
+---
+title: Variant Predictor
+emoji: 🧬
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: false
+---
 # 🧬 Genomic Variant Pathogenicity Predictor
 
 An AI-powered full-stack bioinformatics platform that predicts whether a genomic variant is **benign** or **pathogenic** using biologically-informed machine learning.
