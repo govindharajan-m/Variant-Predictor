@@ -1,13 +1,12 @@
 ---
 title: Variant Predictor
-emoji: 🧬
 colorFrom: blue
 colorTo: green
 sdk: docker
 app_file: app.py
 pinned: false
 ---
-# 🧬 Genomic Variant Pathogenicity Predictor
+# Genomic Variant Pathogenicity Predictor
 
 An AI-powered full-stack bioinformatics platform that predicts whether a genomic variant is **benign** or **pathogenic** using biologically-informed machine learning.
 
@@ -15,7 +14,7 @@ An AI-powered full-stack bioinformatics platform that predicts whether a genomic
 
 ---
 
-## 📋 Overview
+## Overview
 
 This tool simulates real-world clinical variant interpretation workflows (similar to ClinVar-style logic), combining:
 
@@ -27,7 +26,7 @@ This tool simulates real-world clinical variant interpretation workflows (simila
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 genomic-predictor/
@@ -50,7 +49,7 @@ genomic-predictor/
 
 ---
 
-## 🧪 Biological Logic
+## Biological Logic
 
 ### Feature Engineering
 
@@ -74,7 +73,7 @@ Synonymous         → P(pathogenic) = 0.02–0.20  (no AA change)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Option A — Frontend Only (No Server)
 
@@ -106,7 +105,7 @@ open frontend/index.html
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### `GET /health`
 ```json
@@ -172,7 +171,7 @@ Predict from direct codon input.
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 |
 |---|---|---|---|---|
@@ -196,7 +195,7 @@ variant_type_nonsense    █                          2.9%
 
 ---
 
-## 🎓 Skills Demonstrated
+## Skills Demonstrated
 
 - **Machine Learning**: Random Forest, Logistic Regression, cross-validation, feature importance
 - **Bioinformatics**: Genetic code, codon translation, amino acid properties, variant classification
@@ -206,7 +205,7 @@ variant_type_nonsense    █                          2.9%
 
 ---
 
-## 🔬 Biological Accuracy Notes
+## Biological Accuracy Notes
 
 1. **Genetic code**: Standard NCBI genetic code implemented verbatim
 2. **Amino acid properties**: Hydrophobicity (Kyte-Doolittle scale), charge, size, polarity
