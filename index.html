@@ -53,6 +53,18 @@
     }
 
     /* Landing Page */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     #landing-page {
       height: 100vh;
       display: flex;
@@ -61,6 +73,31 @@
       justify-content: center;
       text-align: center;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #landing-page>* {
+      opacity: 0;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .landing-logo {
+      animation-delay: 0.1s;
+    }
+
+    .landing-title {
+      animation-delay: 0.2s;
+    }
+
+    .landing-subtitle {
+      animation-delay: 0.3s;
+    }
+
+    .landing-input-mock {
+      animation-delay: 0.4s;
+    }
+
+    .quick-actions {
+      animation-delay: 0.5s;
     }
 
     .landing-logo {
@@ -737,6 +774,111 @@
       font-family: var(--sans);
       color: var(--text);
       line-height: 1.7;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px 60px 16px;
+      }
+
+      header {
+        padding: 40px 0 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .landing-logo {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+      }
+
+      .landing-title {
+        font-size: 36px;
+        padding: 0 16px;
+      }
+
+      .landing-subtitle {
+        font-size: 16px;
+        padding: 0 16px;
+      }
+
+      .landing-input-mock {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+      }
+
+      .landing-input-mock span {
+        display: none;
+      }
+
+      .landing-btn {
+        width: 100%;
+        border-radius: 12px;
+        padding: 14px 24px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .result-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .classification-badge {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      .variant-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tabs {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .tab {
+        white-space: nowrap;
+        font-size: 13px;
+        margin-right: 16px;
+      }
+
+      .prob-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .prob-label {
+        width: auto;
+      }
+
+      .prob-track {
+        width: 100%;
+      }
+
+      .prob-val {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
