@@ -10,7 +10,7 @@ Endpoints:
 
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import json
 import numpy as np
@@ -27,7 +27,7 @@ app = Flask(__name__)
 
 
 # ── Load model artifacts ─────────────────────────────────────────────────────
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, 'ml_model')
 
 rf_model = joblib.load(os.path.join(MODEL_DIR, 'model_rf.pkl'))
