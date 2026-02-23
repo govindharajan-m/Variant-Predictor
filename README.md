@@ -1,12 +1,3 @@
----
-title: Variant Predictor
-emoji: 🧬
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_file: app.py
-pinned: false
----
 
 # ⌬ Variant Analyzer.
 
@@ -22,45 +13,34 @@ Crafted with a minimalist, high-contrast aesthetic, it combines deep molecular b
 
 ---
 
-## ✨ Why Variant Analyzer?
+## Why Variant Analyzer?
 
-### ⚡ Lightning-Fast Clinical Insight
-No clunky workflows. Input a reference DNA sequence, pick your target nucleotide, or enter a direct codon mutation. Get instantaneous, clinical-grade predictions right in your browser.
+###  Lightning-Fast Clinical Insight
+ Input a reference DNA sequence, pick your target nucleotide, or enter a direct codon mutation. Get instantaneous, clinical-grade predictions right in your browser.
 
-### 🧬 Deep Biological Feature Arrays
-We don't just look at letters. The engine extracts profound biological descriptors in real-time:
+### Deep Biological Feature Arrays
+The engine extracts biological descriptors in real-time:
 * **Physicochemical Amino Acid Substitution Scoring**
 * **Reading Frame Preservation (Nonsense/Frameshift detection)**
 * **Local GC Content Metrics**
 * **Positional Normalization**
 
-### 📊 Explainable AI (XAI) Built-In
+### Explainable AI (XAI) Built-In
 Trust the algorithm. Every prediction comes with a dynamic **Feature Importance Matrix** and clear, natural language synthesis explaining *why* a variant was marked Benign or Pathogenic. See the exact percentage weight of the amino acid disruption.
 
-### 💎 "Vero-Class" UI/UX
-Bioinformatics doesn't have to be ugly. Experience a completely redesigned, ultra-modern interface:
-* **Buttery Smooth Animations**: Hardware-accelerated 60fps entrance sequences and live probability bars.
-* **Flawless Formatting**: Crisp *Satoshi* & *JetBrains Mono* typography wrapped in a stark white and deep purple (`#7C3AED`) palette.
-* **100% Mobile Responsive**: Analyze variants flawlessly on your desktop or your phone. 
-
 ---
 
-## 🚀 Live Demo
+## Live Demo
+https://huggingface.co/spaces/govind1112/Variant-Analyzer
 
-**Experience the app instantly, zero setup required:**
-👉 **[Launch Variant Analyzer on Hugging Face Spaces](https://huggingface.co/spaces/govind1112/Variant-Analyzer)**
 
----
-
-## 🛠 For Developers
-
-Want to run the engine yourself or interface with the Flask API? 
+## For Developers
 
 <details>
 <summary><b>Click to expand local deployment instructions</b></summary>
 
 ### 1. Zero-Install Client Side
-The entire front-end application contains mirrored client-side JS inference. Just double click `frontend/index.html` on your desktop—no servers required!
+The entire front-end application contains mirrored client-side JS inference, double click `frontend/index.html` on your desktop.
 
 ### 2. Full-Stack Docker Deployment (Recommended)
 This requires Docker installed on your machine.
@@ -104,9 +84,6 @@ Send JSON directly to the engine:
 
 ---
 
-*Disclaimer: This tool is a high-fidelity demonstration of machine learning in bioinformatics, trained on synthetic data simulating ClinVar parameters. It is not intended for true clinical diagnostic use.*
-
-
 ## Biological Accuracy Notes
 
 1. **Genetic code**: Standard NCBI genetic code implemented verbatim
@@ -117,6 +94,6 @@ Send JSON directly to the engine:
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is for educational and portfolio demonstration purposes. Predictions are based on a synthetic training dataset and should **not** be used for clinical decision-making. Always consult validated databases (ClinVar, gnomAD) and clinical geneticists for real variant interpretation.
