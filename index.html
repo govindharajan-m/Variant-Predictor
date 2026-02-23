@@ -52,16 +52,58 @@
       padding: 0 24px 80px 24px;
     }
 
-    /* Landing Page */
+    /* Startup Intro & Landing Page */
+    @keyframes startupFade {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      80% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.1);
+        visibility: hidden;
+      }
+    }
+
+    #startup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: startupFade 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .startup-text {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translate3d(0, 20px, 0);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
       }
     }
 
@@ -77,27 +119,30 @@
 
     #landing-page>* {
       opacity: 0;
-      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      will-change: transform, opacity;
+      /* The animation start is delayed so the startup overlay finishes first */
+      animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     }
 
+    /* Stagger delays account for the 1.5s startup overlay */
     .landing-logo {
-      animation-delay: 0.1s;
+      animation-delay: 1.4s;
     }
 
     .landing-title {
-      animation-delay: 0.2s;
+      animation-delay: 1.5s;
     }
 
     .landing-subtitle {
-      animation-delay: 0.3s;
+      animation-delay: 1.6s;
     }
 
     .landing-input-mock {
-      animation-delay: 0.4s;
+      animation-delay: 1.7s;
     }
 
     .quick-actions {
-      animation-delay: 0.5s;
+      animation-delay: 1.8s;
     }
 
     .landing-logo {
@@ -884,6 +929,14 @@
 </head>
 
 <body>
+
+  <!-- Startup Overlay -->
+  <div id="startup-overlay">
+    <div class="startup-text">
+      <div class="landing-logo" style="width: 48px; height: 48px; font-size: 24px; margin: 0; animation: none;">⌬</div>
+      Variant Analyzer.
+    </div>
+  </div>
 
   <!-- Landing Page -->
   <div id="landing-page">
